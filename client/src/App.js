@@ -33,15 +33,20 @@ import Ucam from "./pages/Ucam/Ucam";
 const Routing = () => {
   const history = useHistory();
   const dispatch = useDispatch();
-  const user = JSON.parse(localStorage.getItem("user"));
-  // console.log(user)
   useEffect(() => {
-    if (!user) {
-      history.push("/login");
+    const user = localStorage.getItem("user");
+    if (user) {
+      try {
+        const parsedUser = JSON.parse(user);
+        dispatch({ type: "SET__USER", payload: parsedUser });
+      } catch (error) {
+        console.error("Error parsing user data from local storage:", error);
+      }
     } else {
-      dispatch({ type: "SET__USER", payload: user });
+      history.push("/login");
     }
-  }, []);
+  }, [dispatch, history]);
+  
   return (
     <Switch>
       <StudentRoute exact path="/">

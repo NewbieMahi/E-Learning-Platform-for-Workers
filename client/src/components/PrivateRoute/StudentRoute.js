@@ -2,28 +2,32 @@ import React from 'react';
 import { Redirect, Route } from 'react-router';
 
 const StudentRoute = ({ children, ...rest }) => {
-    const user=JSON.parse(localStorage.getItem("user"))
-   
+  const userJSON = localStorage.getItem('user');
+  let user = null;
 
-    return (
-        <div>
-        <Route
-  {...rest}
-  render={({ location }) =>
-    user && user.role==="Student" ? (
-      children
-    ) : (
-      <Redirect
-        to={{
-          pathname: "/login",
-          state: { from: location }
-        }}
-      />
-    )
+  try {
+    user = JSON.parse(userJSON);
+  } catch (error) {
+    console.error('Error parsing user JSON:', error);
   }
-/>
-    </div>
-    );
+
+  return (
+    <Route
+      {...rest}
+      render={({ location }) =>
+        user && user.role === 'Student' ? (
+          children
+        ) : (
+          <Redirect
+            to={{
+              pathname: '/login',
+              state: { from: location },
+            }}
+          />
+        )
+      }
+    />
+  );
 };
 
 export default StudentRoute;

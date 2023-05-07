@@ -15,11 +15,21 @@ const Header = () => {
   const history = useHistory();
   const dispatch = useDispatch();
   const [toggle, setToggle] = useState(false);
-  const user = JSON.parse(localStorage.getItem("user"));
-  const toggleClose=()=>{
-    setToggle(false)
-    
+
+  let user = null;
+  try {
+    const userString = localStorage.getItem("user");
+    if (userString) {
+      user = JSON.parse(userString);
+    }
+  } catch (e) {
+    console.error("Error parsing user from localStorage:", e);
   }
+
+  const toggleClose = () => {
+    setToggle(false);
+  };
+
   return (
     <div className="header">
       <div className="left__header">

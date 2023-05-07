@@ -36,7 +36,7 @@ if (process.env.NODE_ENV == 'production') {
 
 const PORT = process.env.PORT || 5000;
 mongoose
-  .connect(MONGO_URI, {
+  .connect("mongodb://localhost:27017/elearnnew", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })

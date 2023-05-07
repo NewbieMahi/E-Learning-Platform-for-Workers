@@ -2,7 +2,7 @@ const UserModel = require("../model/UserModel");
 const bcrypt = require("bcryptjs");
 const controllerError = require("../utils/controllerError");
 const jwt = require("jsonwebtoken");
-const { SECRET_KEY } = require("../config/keys");
+const keys = require("../config/keys");
 
 module.exports.register__controller = async (req, res, next) => {
   try {
@@ -43,7 +43,7 @@ module.exports.login__controller = async (req, res, next) => {
   try {
     const { email, password } = req.body;
 
-    const userInfo = await (await UserModel.findOne({ email }));
+    const userInfo = await UserModel.findOne({ email });
 
     if (!userInfo) {
       return res.status(401).json({
@@ -51,7 +51,6 @@ module.exports.login__controller = async (req, res, next) => {
       });
     }
 
-    // console.log(userInfo)
     bcrypt
       .compare(password, userInfo.password)
       .then((result) => {
@@ -61,9 +60,8 @@ module.exports.login__controller = async (req, res, next) => {
           });
         }
 
-        userInfo.password=undefined
-        
-        const token = jwt.sign({ _id: userInfo._id,name: userInfo.userName,email: userInfo.email,role: userInfo.role }, SECRET_KEY);
+        userInfo.password = undefined;
+        const token = jwt.sign({ _id: userInfo._id, name: userInfo.userName, email: userInfo.email, role: userInfo.role }, keys.SECRET_KEY);
         return res.status(200).json({
           userInfo,
           token,
