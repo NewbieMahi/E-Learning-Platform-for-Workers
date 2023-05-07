@@ -2,7 +2,7 @@
 
 .header{
     display: flex;
-    background-color: white;
+    background-color: rgb(32, 222, 222);
     align-items: center;
     box-shadow: 0 0 10px 1px rgba(128, 128, 128, 0.185);
     position: sticky;
@@ -61,8 +61,10 @@
     font-family: 'Roboto', sans-serif;
 }
 .right__header{
+
     display: flex;
     align-items: center;
+    
     
 }
 
@@ -128,4 +130,7 @@
     .menu__toggle__icon{
         display: block;
     }
+}
+.login-but{
+    color: black;
 }

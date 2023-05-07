@@ -38,7 +38,7 @@ const Header = () => {
             src="https://lms.bup.edu.bd/pluginfile.php/1/theme_edumy/headerlogo2/1618037325/bup-icon.png"
             alt=""
           />
-          <h4>LMS</h4>
+          <h4>E-Learning For Workers</h4>
         </Link>
       </div>
       <div
@@ -78,13 +78,7 @@ const Header = () => {
               user.role==="Student" &&<><li>
               <NavLink onClick={toggleClose} to="/">Dashboard</NavLink>
             </li>
-            <li>
-              <NavLink onClick={toggleClose} to="/ucam">UCAM</NavLink>
-            </li>
-
-            <li>
-              <NavLink onClick={toggleClose} to="/library">LIBRARY</NavLink>
-            </li> </> 
+             </> 
             }
             
             <li>
@@ -129,18 +123,7 @@ const Header = () => {
       </div>
       {user ? (
         <div className="right__header">
-          <IconButton>
-            <VisibilityOffIcon />
-          </IconButton>
-          <IconButton>
-            <NotificationsActiveIcon />
-          </IconButton>
-          <IconButton>
-            <ChatIcon />
-          </IconButton>
-          <IconButton>
-            <SettingsIcon />
-          </IconButton>
+          
           <Link to="/profile">
             <Avatar>R</Avatar>
           </Link>
@@ -148,10 +131,10 @@ const Header = () => {
       ) : (
         <div className="d-flex list-unstyled">
           <li className="mr-3">
-            <NavLink to="/Login">Login</NavLink>
+            <NavLink to="/Login" className="login-but">Login</NavLink>
           </li>
           <li>
-            <NavLink to="/Register">Register</NavLink>
+            <NavLink to="/Register" className="login-but">Register</NavLink>
           </li>
         </div>
       )}

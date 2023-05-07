@@ -8,14 +8,14 @@ import NoticeToggle from "./NoticeToggle/NoticeToggle";
 const CourseInfo = () => {
   return (
     <div>
-      <CommonHeader title="ANALYSIS AND DESIGN OF ALGORITHM" />
+      <CommonHeader title="Electrician Tutorial By David" />
       <Container className="my-5">
         <Paper className="px-5 py-3">
           <div className="">
             <div className="d-flex justify-content-between align-items-center my-4">
               <Typography variant="h6">Course Content</Typography>
               <Typography style={{ color: "GrayText" }} variant="subtitle2">
-                Course start date: 19/09/20 Category: Jan - Jun 2021
+                Course start date: 07/05/2023 Category: Electrician
               </Typography>
             </div>
             <NoticeToggle />

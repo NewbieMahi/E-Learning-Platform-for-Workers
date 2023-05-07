@@ -47,19 +47,14 @@ const Dashboard = () => {
     }
   }, [pageValue]);
 
+
   return (
     <div className="dashboard">
       <div className="left__sidebar__dashboard">
         <Sidebar Icon={DashboardIcon} title="Dashboard" link="/" />
         <Sidebar Icon={PersonIcon} title="Profile" link="/profile" />
-        <Sidebar Icon={TouchAppIcon} title="Grades" link="/grades" />
-        <Sidebar Icon={MessageIcon} title="Messages" link="/messages" />
-        <Sidebar
-          Icon={SettingsApplicationsIcon}
-          title="Preferences"
-          link="/preferences"
-        />
         <Sidebar Icon={ExitToAppIcon} title="Logout" />
+      
       </div>
 
       <div className="main__body__dashboard">
@@ -70,43 +65,12 @@ const Dashboard = () => {
           </div>
         </Container>
 
-        <div className="d-flex flex-wrap justify-content-md-between justify-content-md-end">
-          <Body4Card
-            link="/messages"
-            shortTitle="Communicate"
-            title="Message"
-            Icon={MessageIcon}
-          />
-          <Body4Card
-            link="/profile"
-            shortTitle="Your Profile"
-            title="Profile"
-            Icon={AccountCircleOutlinedIcon}
-          />
-          <Body4Card
-            link="/settings"
-            shortTitle="Preferences"
-            title="Settings"
-            Icon={SettingsApplicationsIcon}
-          />
-          <Body4Card
-            shortTitle="Performance"
-            title="Grades"
-            Icon={TouchAppIcon}
-          />
-        </div>
-
+        
         <Container fluid className="my-5">
           <Row>
             <Col md={9} xs={12} sm={12}>
               <Container>
-                <Button
-                  className="my-2 mb-5"
-                  color="primary"
-                  variant="contained"
-                >
-                  Customize This Page
-                </Button>
+                
                 <div>
                   <Row>
                     <Col>
