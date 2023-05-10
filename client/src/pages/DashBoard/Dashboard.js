@@ -53,6 +53,7 @@ const Dashboard = () => {
       <div className="left__sidebar__dashboard">
         <Sidebar Icon={DashboardIcon} title="Dashboard" link="/" />
         <Sidebar Icon={PersonIcon} title="Profile" link="/profile" />
+        <Sidebar Icon={PersonIcon} title="Free Courses" link="/grades" />
         <Sidebar Icon={ExitToAppIcon} title="Logout" />
       
       </div>

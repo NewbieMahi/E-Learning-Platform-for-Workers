@@ -18,11 +18,11 @@ const CourseCard = ({title,name,id,img}) => {
             
             
             <div className={Styles.course__content}>
-                <span>Jan-Jun 2021</span>
+                <span>Electrician</span>
                 <h5>{name}</h5>
                 <h5>{title}</h5>
-                <Button color='primary' variant="contained" >Published</Button><br/>
-                <span>This is a course template which is to be used as the course kit for the teachers.</span>
+                <Button color='primary' variant="contained" >View Course</Button><br/>
+                <span>One of the best Electrician course with more than 100+ learners</span>
             </div>
             
         </div>

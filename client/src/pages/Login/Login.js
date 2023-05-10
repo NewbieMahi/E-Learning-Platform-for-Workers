@@ -47,7 +47,7 @@ const Login = () => {
               dispatch({ type: "SET__USER", payload: result.userInfo });
               localStorage.setItem("auth_token", result.token);
               localStorage.setItem("user", JSON.stringify(result.userInfo));
-             }, 3000);
+             }, 3012);
              clearTimeout();
         }
       })

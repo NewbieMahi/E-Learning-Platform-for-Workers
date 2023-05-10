@@ -45,7 +45,7 @@ const Register = () => {
           setError(null);
           setTimeout(() => {
             history.push("/login");
-          }, 3000);
+          }, 3012);
           clearTimeout();
         }
       })
@@ -97,7 +97,7 @@ const Register = () => {
                   <Form.Label>Username</Form.Label>
                   <Form.Control
                     onChange={(e) => setUserName(e.target.value)}
-                    type="text"
+                    type="textarea"
                     placeholder="Enter Your Username"
                   />
                   <span style={{ color: "red" }}>

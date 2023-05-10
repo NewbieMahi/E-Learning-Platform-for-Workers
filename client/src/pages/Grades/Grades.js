@@ -7,24 +7,24 @@ const courses = [
     videoUrl: 'https://www.youtube.com/embed/pKa7CWmtHuc'
   },
   {
-    title: 'React Hooks',
-    videoUrl: 'https://www.youtube.com/embed/dpw9EHDh2bM'
+    title: 'Plumbing Training',
+    videoUrl: 'https://www.youtube.com/embed/U-TLlwzvk28'
   },
   {
-    title: 'React Router',
-    videoUrl: 'https://www.youtube.com/embed/91F8reC8kvo'
+    title: 'Automotive Training',
+    videoUrl: 'https://www.youtube.com/embed/zA_19bHxEYg'
   },
   {
-    title: 'Redux Basics',
-    videoUrl: 'https://www.youtube.com/embed/93p3LxR9xfM'
+    title: 'Plumbing Basics',
+    videoUrl: 'https://www.youtube.com/embed/SCmtGb5SFfU'
   },
   {
-    title: 'React Native Crash Course',
-    videoUrl: 'https://www.youtube.com/embed/QYw1qjC5EHo'
+    title: 'Painting Course',
+    videoUrl: 'https://www.youtube.com/embed/GhKO0u92ef4'
   },
   {
-    title: 'Advanced React Patterns',
-    videoUrl: 'https://www.youtube.com/embed/4L4fWfDuCfs'
+    title: 'Carpentry Training',
+    videoUrl: 'https://www.youtube.com/embed/lRgDCwb8cvI'
   }
 ];
 
